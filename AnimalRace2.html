@@ -19,7 +19,7 @@
 
 var rabbit = new Animal("Rocky", 8, 3);
 var turtle = new Animal("Myrtle", 3, 9);
-var snake = new Animal("Ekans", 6, 6);
+var snake = new Animal("Ekans", 5, 5);
 var snail = new Animal("Slimer", 1, 7);
 var meters = 100;
 
@@ -32,24 +32,24 @@ while (rabbit.position < meters && turtle.position < meters && snake.position < 
 }
 
 var winner = {
-  checkWinner: function(position) {
+  checkWinner: function() {
     if (rabbit.position >= 100) {
-      return "rabbit";
+      return "Rocky";
     }
     else if (turtle.position >= 100) {
-      return "turtle";
+      return "Myrtle";
     }
     else if (snake.position >= 100){
-      return "snake";
+      return "Ekans";
     }
     else if (snail.position >= 100) {
-      return "snail";
+      return "Slimer";
     }
   }
 }
 
 if(rabbit.position > meters || turtle.position > meters || snake.position > meters || snail.position > meters) {
 
-  alert("Wow, it looks like " + winner + " is the winner! Who could have seen this coming?!");
+  alert("Wow, it looks like " + winner.checkWinner() + " is the winner! Who could have seen this coming?!");
 }
 </script>
